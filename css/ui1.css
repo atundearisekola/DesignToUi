@@ -1,0 +1,555 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+Medium Brown #ffd166
+price Color  #8e9aaf
+Light Grey   #f0efeb
+
+*/
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes waterLake {
+    0% {
+        opacity: 1;
+        
+        transform: translateY(-3rem);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        
+        transform: translateY(-1rem);
+    }
+}
+
+
+@keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    
+    font-size: 62.5%; 
+
+   
+}
+
+body {
+    box-sizing: border-box;
+    
+
+    
+}
+
+.contact{
+    width: 100%;
+    
+    
+    background: #9bb1ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #9bb1ff, #788bff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #9bb1ff, #788bff); 
+    padding: 4rem;
+    
+    
+    
+}
+.contact__box{
+    overflow: hidden;
+    background-color: #fff;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem;
+    margin: 0 auto;
+
+    border-radius: 10px;
+    
+    
+    
+    
+   
+    
+    
+    
+}
+
+hr{
+    width: 80%;
+    margin: auto;
+    color: lightgray;
+    margin-top: 1.2rem;
+    margin-bottom: 4rem;
+    opacity: 0.2;
+    
+}
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
+}
+.text-intalic{font-style: italic;}
+
+
+
+.contact__box__side-1{
+    background-color: #f0efeb;
+    width: 100%;
+    
+    
+}
+.side-1__header{
+    backface-visibility: hidden;
+    
+    width: 100%;
+    background-color: #fff;
+    padding: 3rem;
+    border-bottom:thin solid #e5e5e5;
+    box-shadow:0px 1px 1px 1px #c7c3c3;
+
+}
+
+
+
+.userPf__img{
+    width: 6rem;
+    float: left;
+
+}
+.userPf__text{
+    float: left;
+    padding-left: 10px;
+
+}
+.userPf__name{
+    color: #6d4dc4;
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding-top: 1rem;
+}
+.userPf__status{
+    color: #a0c4ff;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    padding-top: 0.4rem;
+}
+
+ .notification-btn{
+    
+   
+    float: right;
+    padding-top: 1rem;
+    color: #fff;
+    font-size: 2rem;
+    color: #856afc;
+    
+
+    
+}
+
+.header_content{
+    margin-top: 2rem;
+    
+}
+.header_content__title{
+    color: #03071e;
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.header_content__sub{
+    color: #8d99ae;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-btn{
+   margin-right: 1.5rem;
+    
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1.5rem;
+    background: #856afc;
+    border-radius: 3px;
+}
+
+.contact-btn-white{
+    margin-right: 1.5rem;
+     
+     text-decoration: none;
+     font-family: sans-serif;
+     color: #8d99ae;
+     font-size: 1rem;
+     font-weight: 600;
+     padding: 1.5rem;
+     background: #fff;
+     border-radius: 3px;
+     border-top:thin solid  #e5e5e5;
+     border-right:thin solid #e5e5e5;
+     border-bottom:0;
+     border-left:thin solid  #e5e5e5;
+     box-shadow:0px 1px 1px 1px #e5e5e5;
+ }
+
+.search{
+    padding: 1rem;
+  width: 30rem;
+  font-size: 1.2rem;
+  color: gray;
+  background-image: url('../img/search.png');
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  background-position: right center;
+  outline: 0;
+  border-top:thin solid  #e5e5e5;
+  border-right:thin solid #e5e5e5;
+  border-bottom:0;
+  border-left:thin solid  #e5e5e5;
+  box-shadow:0px 1px 1px 1px #e5e5e5;
+  margin: auto;
+}
+
+
+.side-1__main{
+    width: 100%;
+    background-color: #f1faee;
+    float: left;
+    
+    
+}
+
+.contact-list{
+        
+        
+    float: left;
+  
+    padding: 2rem;
+    width: 100%;
+
+   
+}
+.active-contact{
+    
+    background-color: #e0f7f1;
+   
+    
+    
+}
+
+.contact-list__checkbox{
+    float: left;
+    
+    margin-right: 1rem;
+   
+    margin-top: 2rem;
+}
+
+.contact-list__img{
+width: 8rem;
+float: left;
+
+}
+.contact-list__text{
+float: left;
+padding-left: 2rem;
+
+}
+.contact-list__name{
+color: #03071e;
+font-size: 1.8rem;
+font-family: sans-serif;
+font-weight: 500;
+padding-top: 1rem;
+}
+.contact-list__status{
+color: #8d99ae;
+font-size: 1.2rem;
+font-family: sans-serif;
+padding-top: 0.4rem;
+}
+
+.contact-list-btn{
+
+
+float: right;
+text-decoration: none;
+font-family: sans-serif;
+color: #8d99ae;
+font-size: 1.6rem;
+font-weight: 400;
+padding: 2rem;
+
+
+
+
+}
+
+
+
+
+.contact__box__side-2{
+    
+   
+    width: 100%;
+    
+    
+}
+
+.side-2__header{
+    backface-visibility: hidden;
+    float: left;
+    width: 100%;
+    background-color: #6d4dc4;
+
+}
+
+.side-2__header .managerPf{
+        
+        
+        float: left;
+        margin: 4rem;
+    
+       
+}
+
+.managerPf__img{
+    width: 8rem;
+    float: left;
+
+}
+.managerPf__text{
+    float: left;
+    padding-left: 10px;
+
+}
+.managerPf__name{
+    color: #fff;
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding-top: 1rem;
+}
+.managerPf__status{
+    color: #a0c4ff;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    padding-top: 0.4rem;
+}
+
+.animateInLeft{
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.side-2__header .task-btn{
+    
+    margin: 4rem;
+    float: right;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    background: #856afc;
+    border-radius: 2px;
+
+    
+}
+.side-2__header .header__plus{
+    
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: #5e6472;
+    padding: 4rem;
+    opacity: 0.3;
+    
+    float: right;
+    
+}
+
+.side-2__main{
+    width: 100%;
+    background-color: #856afc;
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0rem;
+}
+
+.status{
+    width: 100%;
+    
+    margin-left: 2rem;
+    margin-right: 4rem;
+    margin-top: 4rem;
+}
+.status-text{
+    color: #a0c4ff;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    padding-bottom: 1.8rem;
+    font-weight: 600;
+}
+.status-text-white{
+    color: #fff;
+}
+
+
+.card-item{
+    margin:  auto;
+    background-color: #fff;
+    padding: 2rem;
+    width: 25rem;
+    margin-bottom: 5rem;
+    
+    
+    
+    
+}
+.card-item__img{
+    display: inline-block;
+    width: 10rem;
+    padding: 3px;
+    
+}
+.card-item__number{
+    font-size: 1.4rem;
+    color: grey;
+    padding-top: 3px;
+}
+.card-item__date{
+    font-size: 1.4rem;
+    color: grey;
+    padding-top: 3px;
+}
+.task-item{
+
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: 55rem;
+    
+
+}
+
+.task-item__price{
+
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #a0c4ff;
+    
+    float: right;
+}
+
+.task-item__content{
+    float: left;
+    
+}
+
+.task-item__content-heading{
+    font-family: sans-serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #fff;
+        padding-bottom: 3px;
+        
+
+}
+.task-item__content-sub{
+    font-family: sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #a0c4ff;
+        font-style: italic;
+        
+}
+
+.task-item__icon{
+    float: left;
+    font-size: 3rem;
+    font-weight: 100;
+    color: lightgrey;
+    padding-right: 2rem;
+    
+
+}

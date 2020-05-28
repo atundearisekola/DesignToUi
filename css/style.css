@@ -1,0 +1,320 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+Medium Brown #ffd166
+price Color  #8e9aaf
+Light Grey   #f0efeb
+
+*/
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes waterLake {
+    0% {
+        opacity: 1;
+        
+        transform: translateY(-3rem);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        
+        transform: translateY(-1rem);
+    }
+}
+
+
+@keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    
+    font-size: 62.5%; 
+
+   
+}
+
+body {
+    box-sizing: border-box;
+    
+
+    
+}
+
+.wallet{
+    width: 100%;
+    
+    
+    background-color: #ffd166;
+    
+    padding: 10rem;
+    
+    
+    
+}
+.wallet__box{
+    overflow: hidden;
+    background-color: #fff;
+    max-width: 150rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0rem;
+    margin: 0 auto;
+
+    border-radius: 10px;
+    
+    
+    
+    
+   
+    
+    
+    
+}
+
+hr{
+    width: 80%;
+    margin: auto;
+    color: lightgray;
+    margin-top: 1.2rem;
+    margin-bottom: 4rem;
+    opacity: 0.2;
+    
+}
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
+}
+.text-intalic{font-style: italic;}
+
+
+
+.wallet__box__side-1{
+    background-color: #f0efeb;
+    width: 100%;
+    
+    
+}
+
+
+
+.wallet__box__side-2{
+    
+   
+    width: 100%;
+    
+}
+
+.header{
+    backface-visibility: hidden;
+    
+    
+
+}
+
+
+
+.animateInLeft{
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+
+.header .header__plus{
+    
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: #5e6472;
+    padding: 4rem;
+    opacity: 0.3;
+    
+    float: right;
+    
+}
+.header .header__primary-text{
+    
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: grey;
+    padding: 4rem;
+    font-family: sans-serif;
+    
+    
+    float: left;
+    
+}
+
+.header .header__balance{
+    
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: #5e6472;
+    padding: 4rem;
+    font-family: sans-serif;
+    
+    
+    float: right;
+    
+}
+
+
+
+
+
+.card-item{
+    margin:  auto;
+    background-color: #fff;
+    padding: 2rem;
+    width: 25rem;
+    margin-bottom: 5rem;
+   
+    border-top:thin solid  #e5e5e5;
+    border-right:thin solid #e5e5e5;
+    border-bottom:0;
+    border-left:thin solid  #e5e5e5;
+    box-shadow:0px 1px 1px 1px #e5e5e5;
+    
+    
+    
+}
+.active-card{
+    border-top:thin solid  #a0c4ff;
+    border-right:thin solid #a0c4ff;
+    border-bottom:0;
+    border-left:thin solid  #a0c4ff;
+    box-shadow:0px 1px 1px 1px #a0c4ff;
+}
+.card-item__img{
+    display: inline-block;
+    width: 10rem;
+    padding: 3px;
+    
+}
+.card-item__number{
+    font-size: 1.4rem;
+    color: grey;
+    padding-top: 3px;
+}
+.card-item__date{
+    font-size: 1.4rem;
+    color: grey;
+    padding-top: 3px;
+}
+.bill-item{
+
+    margin:  4rem;
+   
+    padding-bottom: 1rem;
+    width: 70rem;
+    
+
+}
+
+.bill-item__price{
+
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #a0c4ff;
+    
+    float: right;
+}
+
+.bill-item__content{
+    float: left;
+    
+}
+
+.bill-item__content-heading{
+    font-family: sans-serif;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #000;
+        padding-bottom: 3px;
+        
+
+}
+.bill-item__content-sub{
+    font-family: sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #a0c4ff;
+        font-style: italic;
+        
+}
+
+.bill-item__icon{
+    float: left;
+    font-size: 3rem;
+    font-weight: 100;
+    color: lightgrey;
+    padding-right: 2rem;
+    
+
+}
